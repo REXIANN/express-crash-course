@@ -1,12 +1,10 @@
 const express = require('express')
 const app = express()
 
+app.set('view engine', 'ejs')
+
 app.get('/', (req, res) => {
-  // res.send('Hi')
-  // res.sendStatus(404)
-  // res.status(404).send('Hi')
-  // res.download('server.js')
-  res.render()
+  res.render('index', { text: 'World' })
 })
 
 app.listen(3000)
