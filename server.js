@@ -2,9 +2,8 @@ const express = require('express')
 const app = express()
 
 app.set('view engine', 'ejs')
-app.use(logger) // first middleware that we put
 
-app.get('/', (req, res) => {
+app.get('/', logger, (req, res) => {
   res.render('index', { text: 'World' })
 })
 
